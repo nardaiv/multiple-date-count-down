@@ -1,5 +1,5 @@
 export default {
-    snbp : [
+    SNBP : [
         {
             title : "Pengumuman Kuota Sekolah",
             isMultipleDate : false,
@@ -35,7 +35,7 @@ export default {
             date : "26-3-2024"
         },
     ],
-    snbt : [
+    SNBT : [
         {
             title : 'Pendaftaran UTBK - SNBT',
             isSingleDate : true, 
