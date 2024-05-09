@@ -13,7 +13,7 @@ export default function OtherSchedule(props){
     })
 
     return(
-        <div className="mt-10 w-12/12">
+        <div className="mt-10 w-full md:w-9/12 lg:w-6/12 ">
             <h2 className="font-semibold text-[24px] mb-2">Other Events</h2>
             <table className="table-fixed border-collapse border-spacing-0 text-[14px] w-full">
                 <tbody>
