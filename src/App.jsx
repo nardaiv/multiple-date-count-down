@@ -15,7 +15,7 @@ function App() {
    
 
   return (
-    <div className='p-5 gap-10 '>
+    <div className='p-5 gap-10 flex flex-col justify-center items-center '>
       
       <h1 className='font-bold text-3xl text-center mb-10'>Schedule List</h1>
 
