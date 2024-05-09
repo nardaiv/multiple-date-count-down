@@ -10,7 +10,7 @@ export default function Menu(props){
    })
 
     return (
-       <div className="  bg-grey rounded-lg w-full md:w-9/12 lg:w-6/12 border-2 border-darkgrey flex flex-row p-3 justify-between">
+       <div className="  bg-grey rounded-lg w-full md:w-9/12 lg:w-3/12 border-2 border-darkgrey flex flex-row p-3 justify-between">
          {menuElements}
        </div> 
     )
