@@ -23,8 +23,8 @@ function App() {
 
       <CountDown currentDate={currentDate} data={Data} selectedMenu={selectedMenu}/>
 
-      {/* <OtherSchedule currentDate={currentDate} data={Data}  selectedMenu={selectedMenu}/>
- */}
+      <OtherSchedule currentDate={currentDate} data={Data}  selectedMenu={selectedMenu}/>
+
     </div>
   
   )
