@@ -25,7 +25,7 @@ function App() {
 
       <OtherSchedule currentDate={currentDate} data={Data}  selectedMenu={selectedMenu}/>
 
-      <p className='text-faintblack'>Built with ❤️ by <a href="https://github.com/nardaiv/" className='underline decoration-mainblue/40'>nardaiv</a></p>
+      <p className='text-gray-400'>Built with ❤️ by <a href="https://github.com/nardaiv/" className='underline decoration-mainblue/40'>nardaiv</a></p>
     </div>
   
   )
