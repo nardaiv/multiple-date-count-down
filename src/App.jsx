@@ -12,7 +12,23 @@ function App() {
     setSelectedMenu(id)
   }
 
-   
+  //add status date to tell which date has already in the past
+  const processedData = Data.schedules.map( (val, i)=> {
+
+    const newData = val.events.map( el => {
+      const eventDate = new Date(el.date)
+
+      //check the date by comparing with the currentDate (in ms)
+      let eventStatusInPast = eventDate.getTime() < currentDate.getTime() ? true : false;
+
+      return {
+        ...el,
+        isEventPast : eventStatusInPast 
+      }
+    }) 
+
+    return newData 
+  })
 
   return (
     <div className='p-5 gap-10 flex flex-col justify-center items-center '>

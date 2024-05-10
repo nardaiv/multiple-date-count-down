@@ -8,7 +8,7 @@ export default {
                 {title : "activity 1", date : "2024-05-09"},
                 {title : "activity 1", date : "2024-05-09"},
                 {title : "activity 1", date : "2024-05-09"},
-                {title : "activity 1", date : "2024-05-09"}
+                {title : "activity 1", date : "2024-06-09"}
             ]
         },
         {
