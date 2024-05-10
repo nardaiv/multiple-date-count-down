@@ -1,8 +1,7 @@
 import React from "react";
 
 export default function OtherSchedule(props){
-
-    const tableElement = props.data.schedules[props.selectedMenu].events.map((val, i)=>{
+    const tableElement = props.data[props.selectedMenu].events.map((val, i)=>{
         return(
             <tr className="leading-10" key={i}>
                 <td className="border-y-2 border-darkgrey">{val.title}</td>
