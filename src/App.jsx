@@ -28,7 +28,7 @@ function App() {
         }
       }) 
 
-      return newData 
+      return {...val, events: newData }
     }))
   }, [])
 
