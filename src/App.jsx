@@ -27,25 +27,22 @@ function App() {
       return {...val, events: newData }
     })
   )
-  console.log(processedData)
   const [selectedEventIndex, setSelectedEventIndex] = React.useState(0)
 
-  console.log(selectedEventIndex) 
   React.useEffect(()=>{
     //change the selectedEventIndex so it matches the selectedMenu
     setSelectedEventIndex(()=>{
-      let i = null;
-      let eventsArr = processedData[selectedMenu].events ;
-      for(let j = 0; j<eventsArr.length; j++){
-        i = !eventsArr[j].isEventPast ? j : null;
-      }
-      return i
+      //filtering the processedData that has the isEventPast value equal to false (which mean the date isn't the past)
+      let eventsArr = processedData[selectedMenu].events.filter((val) => {
+        return !val.isEventPast;
+      }) ;
+      //grab the sooner date
+      return eventsArr[0] 
     })
   }, [selectedMenu])
 
   function changeSelected(id){
     setSelectedMenu(id)
-    if (selectedMenu!= id ) setSelectedEventIndex(0)
   }
 
   return (

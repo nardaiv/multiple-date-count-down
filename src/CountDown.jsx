@@ -1,10 +1,7 @@
 import React from 'react'
 
 export default function CountDown(props){
-    // console.log(props)
-    const selectedEvent = props.data[props.selectedMenu].events[props.selectedEventIndex];
-    // console.log(selectedEvent)
-
+    const selectedEvent = props.selectedEventIndex;
 
     const eventDate = new Date(selectedEvent.date);
     const remainingDate = Math.ceil((eventDate.getTime() - props.currentDate.getTime())/(1000*60*60*24));
