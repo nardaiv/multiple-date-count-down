@@ -14,7 +14,8 @@ export default {
         {
             groupName : "class 2",
             events : [
-                {title : "activity 1", date : "1-6-2024"}
+                {title : "activity 1", date : "2024-06-01"},
+                {title : "activity 1", date : "2024-06-09"}
             ]
         }
     ]
