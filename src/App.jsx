@@ -6,7 +6,7 @@ import OtherSchedule from './OtherSchedule';
 
 function App() {
   const [currentDate, setCurrentDate ]= React.useState(new Date());
-  const [selectedMenu, setSelectedMenu] = React.useState(1);
+  const [selectedMenu, setSelectedMenu] = React.useState(0);
 
   //add status date to tell which date has already in the past
   const [processedData, setProcessedData]= React.useState(
