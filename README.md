@@ -4,7 +4,7 @@ It's a simple count down day website. It supports multiple dates to display in t
 ## Usage
 To use the website in your local in environment, you need nodejs installed in your environment. Then you can follow this command to clone and set it up :
 ```bash
-git clone https://github.com/nardaiv/mutiple-date-count-down.git 
+git clone https://github.com/nardaiv/multiple-date-count-down.git 
 cd multiple-date-count-down
 npm -i
 ```

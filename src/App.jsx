@@ -27,7 +27,8 @@ function App() {
       return {...val, events: newData }
     })
   )
-  const [selectedEventIndex, setSelectedEventIndex] = React.useState(0)
+	//add Default to 0 for selectedEvent
+  const [selectedEventIndex, setSelectedEventIndex] = React.useState(processedData[selectedMenu].events[0])
 
   React.useEffect(()=>{
     //change the selectedEventIndex so it matches the selectedMenu
@@ -45,16 +46,36 @@ function App() {
     setSelectedMenu(id)
   }
 
+	function changeSelectedEventIndex(event){
+		setSelectedEventIndex(event)
+	}
+
+
   return (
     <div className='p-5 gap-10 flex flex-col justify-center items-center '>
       
       <h1 className='font-bold text-3xl text-center mb-10'>Schedule List</h1>
 
-      <Menu selectedMenu={selectedMenu} data={Data} changeSelected={(a) => changeSelected(a)} />  
+      <Menu 
+	  selectedMenu={selectedMenu} 
+	  data={Data} 
+	  changeSelected={(a) => changeSelected(a)} 
+	/>  
 
-      <CountDown currentDate={currentDate} data={processedData} selectedMenu={selectedMenu} selectedEventIndex={selectedEventIndex}/>
+      <CountDown 
+	  currentDate={currentDate} 
+	  data={processedData} 
+	  selectedMenu={selectedMenu} 
+	  selectedEventIndex={selectedEventIndex}
+	  />
 
-      <OtherSchedule currentDate={currentDate} data={processedData}  selectedMenu={selectedMenu} selectedEventIndex={selectedEventIndex}/>
+      <OtherSchedule 
+	  currentDate={currentDate} 
+	  data={processedData}  
+	  selectedMenu={selectedMenu} 
+	  selectedEventIndex={selectedEventIndex}
+	  changeSelectedEventIndex={(a) => changeSelectedEventIndex(a)}
+	  />
 
       <p className='text-gray-400'>Built with ❤️ by <a href="https://github.com/nardaiv/" className='underline decoration-mainblue/40 hover:decoration-4'>nardaiv</a></p>
     </div>
