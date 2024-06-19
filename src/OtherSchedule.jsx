@@ -2,16 +2,19 @@ import React from "react";
 
 export default function OtherSchedule(props){
 	//Create table markup
-    const tableElement = props.data[props.selectedMenu].events.map((val, i)=>{
+    const tableElement = props.processedData[props.selectedMenu].events.map((val, i)=>{
         return(
-            <tr className={val.isEventPast? "leading-10 line-through": "leading-10"}
-		//giving ability to change selectedEventIndex corespond to user selection in the table
-            onClick={()=> !val.isEventPast&& props.changeSelectedEventIndex(val)}
-            key={i}>
-                <td className="border-y-2 border-darkgrey">{val.title}</td>
-                <td className="border-y-2 border-darkgrey text-right">{new Date(val.date).toDateString()}</td>
-            </tr>
-        )
+		<tr 
+		className={val.isEventPast? "leading-10 line-through": "leading-10"}
+
+		//giving ability to change selectedEvent corespond to user selection in the table
+		onClick={()=> !val.isEventPast&& props.changeSelectedEvent(val)}
+		key={i}
+		>
+		<td className="border-y-2 border-darkgrey">{val.title}</td>
+		<td className="border-y-2 border-darkgrey text-right">{new Date(val.date).toDateString()}</td>
+		</tr>
+	)
 
     })
 

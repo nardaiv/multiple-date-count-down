@@ -27,12 +27,12 @@ function App() {
       return {...val, events: newData }
     })
   )
-	//add Default to 0 for selectedEvent
-  const [selectedEventIndex, setSelectedEventIndex] = React.useState(processedData[selectedMenu].events[0])
+	//add Default to event at index 0 for selectedEvent
+  const [selectedEvent, setSelectedEvent] = React.useState(processedData[selectedMenu].events[0])
 
   React.useEffect(()=>{
     //change the selectedEventIndex so it matches the selectedMenu
-    setSelectedEventIndex(()=>{
+    setSelectedEvent(()=>{
       //filtering the processedData that has the isEventPast value equal to false (which mean the date isn't the past)
       let eventsArr = processedData[selectedMenu].events.filter((val) => {
         return !val.isEventPast;
@@ -46,8 +46,8 @@ function App() {
     setSelectedMenu(id)
   }
 
-	function changeSelectedEventIndex(event){
-		setSelectedEventIndex(event)
+	function changeSelectedEvent(event){
+		setSelectedEvent(event)
 	}
 
 
@@ -64,17 +64,16 @@ function App() {
 
       <CountDown 
 	  currentDate={currentDate} 
-	  data={processedData} 
 	  selectedMenu={selectedMenu} 
-	  selectedEventIndex={selectedEventIndex}
+	  selectedEvent={selectedEvent}
 	  />
 
       <OtherSchedule 
 	  currentDate={currentDate} 
-	  data={processedData}  
+	  processedData={processedData}  
 	  selectedMenu={selectedMenu} 
-	  selectedEventIndex={selectedEventIndex}
-	  changeSelectedEventIndex={(a) => changeSelectedEventIndex(a)}
+	  selectedEvent={selectedEvent}
+	  changeSelectedEvent={(a) => changeSelectedEvent(a)}
 	  />
 
       <p className='text-gray-400'>Built with ❤️ by <a href="https://github.com/nardaiv/" className='underline decoration-mainblue/40 hover:decoration-4'>nardaiv</a></p>

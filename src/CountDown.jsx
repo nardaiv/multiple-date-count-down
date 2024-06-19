@@ -1,7 +1,7 @@
 import React from 'react'
 
 export default function CountDown(props){
-	const selectedEvent = props.selectedEventIndex;
+	const selectedEvent = props.selectedEvent;
 	let remainingDate, eventDate = null
 	if(selectedEvent){
 		eventDate = new Date(selectedEvent.date);
