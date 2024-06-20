@@ -1,22 +1,37 @@
-export default {
+let Data = {
     schedules:[
         {
-            groupName : "class 1",
+            groupName : "Summer",
             events : [
-                {title : "activity 1", date : "2024-05-09"},
-                {title : "activity 1", date : "2024-07-09"},
-                {title : "activity 1", date : "2024-07-06"},
-                {title : "activity 1", date : "2024-07-09"},
-                {title : "activity 1", date : "2024-07-09"},
-                {title : "activity 1", date : "2024-07-09"}
+                {title : "School Work"},
+                {title : "Go to beach"},
+                {title : "Playing volly"},
+                {title : "Visit Relatives"},
             ]
         },
         {
-            groupName : "class 2",
+            groupName : "Winter",
             events : [
-                {title : "activity 1", date : "2024-06-01"},
-                {title : "activity 1", date : "2024-06-09"}
+                {title : "Ski"},
+                {title : "Ice skating"}
             ]
         }
     ]
 }
+
+function generateDate(){
+	const currentDate = new Date();
+	const currentMonth = currentDate.getMonth() + 1;
+	const currentYear = currentDate.getFullYear(); 
+	const RandomDate = Math.ceil(Math.random()*30)
+	return `${currentYear}-${currentMonth}-${RandomDate}`
+}
+
+for (let i=0; i<Data.schedules.length ; i++){
+	for(let j = 0; j<Data.schedules[i].events.length; j++){
+		Data.schedules[i].events[j]= {...Data.schedules[i].events[j], date : generateDate() }
+	}
+}
+
+
+export default Data;
