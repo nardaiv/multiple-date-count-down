@@ -6,7 +6,7 @@ To use the website in your local in environment, you need nodejs installed in yo
 ```bash
 git clone https://github.com/nardaiv/multiple-date-count-down.git 
 cd multiple-date-count-down
-npm -i
+npm i
 ```
 After that, you can configure the dates in the `src/data.js` file. To see the website, you can run the following command :
 ```bash
